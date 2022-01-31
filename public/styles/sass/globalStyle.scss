@@ -1,0 +1,54 @@
+/* FONT */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@font-face {
+    font-family: PlayfairDisplay;
+    src: url(../../../public/fonts/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+/* sass --watch ./sass/globalStyle.scss:./css/globalStyle.css --style compressed */
+
+/* COLORS */
+$text-white: #F8F8F8;
+$text-black: #202020;
+$text-black-60: #444444;
+$text-black-20: #949494;
+
+$bg-body: #FDFDFD;
+$bg-white: #F8F8F8;
+$bg-black-80: #202020;
+$bg-black-60: #444444;
+$bg-black-40: #6C6C6C;
+$bg-black-20: #949494;
+
+@mixin d-flex($justify,$align) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+}
+
+@mixin grid-contaier($width) {
+    max-width: $width;
+    margin: 0 auto;
+}
+
+.container{
+    @include grid-contaier(1140px);
+    padding: 0 50px;
+}
+.container-section{
+    @include grid-contaier(1140px);
+    padding: 50px 50px;
+}
+
+
+
+@import './reset';
+@import './menu';
+@import './topics';
+@import './news';
+@import './news-page';
+@import './edit-news';
+@import './new-article';
+@import './search-news-portal';
+@import './error-page';
+@import './footer';

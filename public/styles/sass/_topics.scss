@@ -1,0 +1,114 @@
+#hot-topics{
+    
+    h1{
+        font-size: 48px;
+        color: $text-black;
+    }
+
+    .news-container{
+        display: flex;
+        margin-top: 20px;
+        
+        /* BANNER */
+        .banner-news{
+            width: 870px;
+            height: 400px;
+            position: relative; 
+            border-radius: 8px;
+            overflow: hidden;
+            img{
+                width: 100%;
+                height: 100%;
+                user-select: none;
+                pointer-events: none;
+            } 
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(0deg ,rgba(0, 0, 0, 0.698),rgba(0, 0, 0, 0.4) 40%,rgba(0,0,0,.2) 80%,rgba(0,0,0,.4));
+                top: 0;
+                left: 0;
+            }
+            .info-banner{
+                position: absolute;
+                bottom: 0px;
+                color: $text-white;
+                left: 0px;
+                z-index: 1;
+                margin: 32px;
+
+                h1{
+                    color: $text-white;
+                    font-size: 32px;
+                    font-family: PlayfairDisplay;
+                    margin-bottom: 16px;
+                }
+
+                span{
+                    margin-right: 30px;
+                    font-size: 12px;
+                    font-weight: 300;
+                    color: $text-white;
+                }
+            }
+        }
+         
+        /* RESUME NEWS */
+        .resume-news{ 
+            margin: 30px;
+            width: 270px;
+            font-family: PlayfairDisplay;
+            font-size: 18px;
+            color: $text-black-60;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #hot-topics{
+        h1{
+            font-size: 36px;
+        }
+        .news-container{ 
+            /* BANNER */
+            .banner-news{
+                width: 100%;
+                height: inherit;
+                .info-banner{
+                    margin: 12px;
+                    h1{
+                        font-size: 24px;
+                    }
+                    span{
+                        font-size: 8px;
+                    }
+                }
+            }
+             /* RESUME NEWS */
+            .resume-news{
+                display: none;
+            }
+        }
+    }
+}
+@media screen and (max-width: 720px) {
+    #hot-topics{
+        h1{
+            font-size: 36px;
+        }
+        .news-container{ 
+            /* BANNER */
+            .banner-news{
+                width: 100%;
+                .info-banner{
+                    h1{
+                        font-size: 16px;
+                    }
+                }
+            }
+             
+        }
+    }
+} 

@@ -1,0 +1,27 @@
+#search-news-portal.container-section{
+        margin-top: -40px;
+    }
+
+#search-news-portal{  
+
+    .search-news-portal-container{
+        display: flex;
+        align-items: center; 
+        position: relative;
+        
+        input{
+            width: 100%;
+            border: 1px solid #949494;
+            padding: 10px 20px;
+            padding-right: 50px;
+            border-radius: 8px;
+            font-size: 16px; 
+        }
+
+        svg{
+            position: absolute;
+            right: 15px;
+            stroke: #949494;
+        }
+    }
+}

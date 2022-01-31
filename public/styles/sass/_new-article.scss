@@ -1,0 +1,61 @@
+
+#new-article{
+    h1{
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+
+    .container-new-article{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid $bg-black-20;
+        border-radius: 8px;
+        padding: 0px 20px;
+
+        label{
+            margin-top: 25px;
+            margin-bottom: 5px;
+        }
+        input, select, textarea{
+            border: 1px solid $bg-black-20;
+            border-radius: 8px;
+            padding: 10px 10px;
+            font-size: 14px;
+        } 
+        textarea { 
+            resize: none;
+            width: 100%;
+        }
+
+        span{
+            margin: 30px 0;
+            
+            a, button{
+                font-size: 16px;
+                padding: 5px 20px;
+                border-radius: 8px;
+            }
+
+            a{
+                color: $text-black-60;
+                background-color: $bg-white;
+                
+                &:hover{
+                    background-color: rgb(235, 235, 235);
+                }
+            }
+
+            button{
+                background-color: $bg-black-80;
+                color: $text-white;
+                margin-left: 20px;
+                cursor: pointer;
+
+                &:hover{
+                    background-color: black;
+                }
+            }
+        }
+
+    }
+}
