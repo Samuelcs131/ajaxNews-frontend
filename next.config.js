@@ -1,6 +1,6 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['localhost'],
+    domains: ['ajax-news.s3.us-east-2.amazonaws.com'],
   },
 }
