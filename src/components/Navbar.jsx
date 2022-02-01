@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 
 
-const Navbar = ({ URL_API }) => {
+const Navbar = () => {
 
     const myRouter = useRouter()
 
@@ -79,7 +79,7 @@ const Navbar = ({ URL_API }) => {
                 <a><button className={activeForPortal() == true ? "active":""}>Portal</button></a></Link>
          </div> 
         <div className="right-menu-container">
-            <form action={`${URL_API}/search/search`} method="GET">
+            <form action={`/search/search`} method="GET">
 
             <svg id="icon-search-navbar" viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" className="css-i6dzq1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
 
@@ -110,10 +110,5 @@ const Navbar = ({ URL_API }) => {
    );
 }
 
-export async function getServerSideProps() { 
-    const URL_API = process.env.URL_API
-   
-    return { props: { URL_API } }
-  }
-
+ 
 export default Navbar
