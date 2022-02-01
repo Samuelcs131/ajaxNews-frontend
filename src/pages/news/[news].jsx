@@ -53,7 +53,7 @@ export async function getStaticPaths() {
     
     let paths = dataNews.map(artigo => {
         return { params: { news: artigo.id.toString() }, }
-    }).slice(0,1)
+    })
 
     return {
         paths,
