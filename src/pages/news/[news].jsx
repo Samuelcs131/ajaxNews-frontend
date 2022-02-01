@@ -50,10 +50,8 @@ export async function getStaticPaths() {
 
     let dataNews = await Axios.get(`${process.env.URL_API}/ajaxNews/artigos`)
     .then( artigos => artigos.data)
-    
-    let paths = dataNews.map(artigo => {
-        return { params: { news: artigo.id.toString() }, }
-    })
+
+    let paths = [{ params: { news: dataNews[0].id.toString() }, }]
 
     return {
         paths,
@@ -64,16 +62,18 @@ export async function getStaticPaths() {
 export async function getStaticProps(context) {
 const { news } = context.params
 
+
 let dataNews = await Axios.get(`${process.env.URL_API}/ajaxNews/artigos/id/${news}`).then(dados => dados.data).catch( erro => console.log('erro ao requisitar news') ) || []
-  
+
+
 // RETORNA PAGINA 404
 if (!dataNews) {
 return { notFound: true }
 }
 
 return {
-    props: { dataNews },
-    
+    props: { dataNews }, 
+    revalidate: 86400,
 }
 }
  
