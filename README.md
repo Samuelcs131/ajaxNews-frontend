@@ -4,8 +4,7 @@ Todas noticias em um só lugar. [Acessar projeto](https://ajaxnews.vercel.app/),
 ### Tecnologias utilizadas no desenvolvimento:
 * Javascript
 * Next.js
-* MySQL
-* AWS S3 
+* Axios
 
 ## Iniciar projeto em servidor local
 
